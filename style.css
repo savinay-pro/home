@@ -14,6 +14,7 @@ body {
 }
 .heading{
     width: 400px ;
+    display: inline-block;
     
 }
  h1 {

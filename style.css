@@ -28,18 +28,27 @@ sub {
 p{
     color: #779ab1;
     font-size: large;
-    border-right: 5px solid;
+/*     border-right: 5px solid;
     width: 100%
     white-space: nowrap;
     overflow: hidden;
     animation:
       typing 2s steps(74),
-      cursor .4s step-end infinite alternate;
+      cursor .4s step-end infinite alternate; */
 }
 
-@keyframes cursor {
-  50% { border-color: transparent}
+#typing::after {
+  content: '|';
+  animation: blink 0.7s infinite;
 }
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* @keyframes cursor {
+  50% { border-color: transparent}
+} */
 
 .icons {
     width: 300px;

@@ -39,7 +39,9 @@ p{
 
 #typing::after {
   content: '|';
-  animation: blink 0.7s infinite;
+  animation: 
+    typing 2s,
+    blink 0.7s infinite;
 }
 @keyframes blink {
   0%, 100% { opacity: 1; }

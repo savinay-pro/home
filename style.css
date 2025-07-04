@@ -65,3 +65,42 @@ p{
     color:#cbd6ed;
     transform: scale(105%);
 }
+
+/* Add this to your CSS */
+.infinite-loader-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 32px;
+  display: flex;
+  justify-content: center;
+  z-index: 9999;
+  pointer-events: none; /* Allows clicking through */
+}
+
+.infinite-loader {
+  background: #222;
+  border-radius: 16px;
+  padding: 16px;
+  box-sizing: content-box;
+}
+
+.infinity-track {
+  opacity: 0.25;
+}
+
+.infinity-loader {
+  stroke: url(#infinity-gradient);
+  animation: infinity-move 1.6s linear infinite;
+}
+
+@keyframes infinity-move {
+  to {
+    stroke-dashoffset: -250;
+  }
+}
+
+/* Optional: SVG gradient for color effect */
+.infinite-loader defs {
+  /* Empty by default, see below for JS gradient injection */
+}
